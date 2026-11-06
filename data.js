@@ -5,7 +5,7 @@ window.PORTFOLIO_DATA = {
     affiliation: "Akita University",
     location: "Japan",
     tagline: "Bridging geotechnical engineering and artificial intelligence for smarter, safer tunnelling.",
-    refreshed: "2026-06-12",
+    refreshed: "2026-11-06",
     links: [
       {
         label: "Google Scholar",
@@ -118,6 +118,14 @@ window.PORTFOLIO_DATA = {
     }
   ],
   projects: [
+    {
+      name: "GeoModel3D",
+      category: "Engineering app",
+      description: "Browser app that builds 3-D geological models from borehole logs and CPTs, with sections, groundwater and stresses, and reads borehole logs from PDF reports on the user's device.",
+      url: "https://github.com/kilickursat/GeoModel3D",
+      site: "https://kilickursat.github.io/GeoModel3D/",
+      tags: ["three.js", "WebGPU", "Geotechnics"]
+    },
     {
       name: "Clustering-guided-LightGBM",
       category: "Publication code",

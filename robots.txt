@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kilickursat.github.io/sitemap.xml
+Sitemap: https://kilickursat.github.io/GeoModel3D/sitemap.xml
