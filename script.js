@@ -148,6 +148,7 @@
       project.tags.forEach((tag) => tags.appendChild(el("span", "tag", tag)));
       card.appendChild(tags);
       const actions = el("div", "card-actions");
+      if (project.site) actions.appendChild(externalAnchor(project.site, "Open the app", "text-link"));
       actions.appendChild(externalAnchor(project.url, "Open repository", "text-link"));
       card.appendChild(actions);
       grid.appendChild(card);
