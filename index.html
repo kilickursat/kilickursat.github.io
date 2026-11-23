@@ -16,6 +16,8 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="model-plate.css">
+  <link rel="stylesheet" href="lining-study.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,6 +36,7 @@
   </script>
   <script src="data.js" defer></script>
   <script src="script.js" defer></script>
+  <script src="lining-study.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -61,34 +64,68 @@
     </div>
   </header>
   <main id="main" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-title">
-      <picture class="hero-art" id="tbm-canvas">
-        <source media="(max-width: 600px)" srcset="assets/tunnel-mobile.webp">
-        <img src="assets/tunnel-1200.webp" srcset="assets/tunnel-1200.webp 1200w, assets/tunnel-1920.webp 1920w" sizes="100vw" width="1920" height="800" alt="" fetchpriority="high">
-      </picture>
-      <div class="hero-shade"></div>
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="overline role"><span></span>Geotechnical research engineer</p>
-          <h1 id="hero-title">Kursat <i>Kilic</i></h1>
-          <p class="hero-lead" id="snapshot-title">I develop AI for rock mechanics and tunnelling. I use tunnel boring machine data to identify ground conditions and predict cutter wear.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#research">Selected research</a>
-            <div class="cv-action">
-              <a class="button secondary" href="KURSAT_KILIC_CV.pdf" download aria-describedby="cv-edition">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
-                Download CV
-              </a>
-              <span class="edition" id="cv-edition">PDF · Nov 2026</span>
+    <section class="hero" aria-labelledby="hero-title" data-view="cutaway">
+      <div class="hero-stage">
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="overline role">Geotechnical research engineer</p>
+            <h1 id="hero-title">Kursat <i>Kilic</i></h1>
+            <p class="hero-lead" id="snapshot-title">I develop AI for rock mechanics and tunnelling, using machine logs to identify the ground being cut and estimate cutter wear.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#research">Selected research</a>
+              <div class="cv-action">
+                <a class="button secondary" href="KURSAT_KILIC_CV.pdf" download aria-describedby="cv-edition">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
+                  Download CV
+                </a>
+                <span class="edition" id="cv-edition">PDF · Nov 2026</span>
+              </div>
             </div>
+            <p class="location"><svg width="13" height="16" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 9c0 5-7 12-7 12S3 14 3 9a7 7 0 0 1 14 0Z"/><circle cx="10" cy="9" r="2.3"/></svg>Yokohama, Japan</p>
           </div>
         </div>
-        <div class="hero-foot">
-          <span class="location"><svg width="15" height="17" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 9c0 5-7 12-7 12S3 14 3 9a7 7 0 0 1 14 0Z"/><circle cx="10" cy="9" r="2.3"/></svg>Yokohama, Japan</span>
-          <span class="image-note">AI-generated illustration <b aria-hidden="true">/</b> Segmentally lined tunnel</span>
+        <figure class="hero-plate" id="tbm-canvas">
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/cutaway-mobile.webp">
+            <img src="assets/cutaway-1200.webp" srcset="assets/cutaway-1200.webp 1200w, assets/cutaway-1920.webp 1920w" sizes="100vw" width="1920" height="806" alt="Cutaway model showing a concrete tunnel lining and layers of soil and rock." fetchpriority="high">
+          </picture>
+          <figcaption>AI-generated illustration</figcaption>
+        </figure>
+      </div>
+      <div class="scene-rail">
+        <div class="wrap rail-inner">
+          <p class="rail-title">Segmental tunnel lining</p>
+          <fieldset class="scene-views" hidden>
+            <legend class="sr-only">Tunnel illustration view</legend>
+            <label><input type="radio" name="tunnel-view" value="cutaway" data-asset="cutaway" checked><span>Cutaway</span></label>
+            <label><input type="radio" name="tunnel-view" value="interior" data-asset="tunnel" data-alt="Looking down a segmentally lined tunnel, with work lights and cable trays following the rings."><span>Interior</span></label>
+          </fieldset>
+          <a class="model-launch" id="lining-poster-link" href="asset-credits.html#lining-model">View lining model</a>
+          <button class="model-launch" id="open-lining-study" type="button" aria-haspopup="dialog" aria-controls="lining-study" hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 10 9-5M3 7l9 5v10"/></svg>
+            Inspect in 3D
+          </button>
         </div>
       </div>
     </section>
+    <dialog id="lining-study" aria-labelledby="lining-title" aria-describedby="lining-description">
+      <div class="lining-shell">
+        <header class="lining-head">
+          <div><p class="lining-kicker">Interactive 3D study</p><h2 id="lining-title">Segmental lining</h2></div>
+          <button type="button" class="lining-close" aria-label="Close lining study" autofocus>Close</button>
+        </header>
+        <div class="lining-stage">
+          <img src="assets/lining-study.webp" width="1000" height="650" loading="lazy" alt="Illustrative model of three staggered precast lining rings with their segments separated.">
+          <canvas hidden aria-hidden="true"></canvas>
+        </div>
+        <p class="lining-caption"><span id="lining-description">Three rings meet at staggered joints. The copper segment marks the crown key.</span> <span class="lining-hint">Drag to rotate or use the sliders.</span><span class="lining-static" hidden>Static model view.</span></p>
+        <div class="lining-controls" hidden>
+          <label>Rotation<input id="lining-angle" type="range" min="-180" max="180" value="0" step="1"></label>
+          <label>Separation<input id="lining-gap" type="range" min="0" max="100" value="36" step="1"></label>
+          <button class="lining-reset" type="button">Reset view</button>
+        </div>
+      </div>
+    </dialog>
     <section class="wrap section research" id="research" aria-labelledby="research-title">
       <div class="section-head">
         <h2 id="research-title">Selected <i>research</i></h2>
@@ -96,10 +133,38 @@
       </div>
       <article class="feature">
         <figure class="model-figure">
-          <a href="assets/research/geomodel3d-sakae.jpg" aria-label="View the full-size GeoModel3D screenshot">
-            <img src="assets/research/geomodel3d-sakae.jpg" alt="The Sakae terrain cutaway above a cross-section of five coloured geological units, shown in GeoModel3D." width="1600" height="900" loading="lazy">
-          </a>
-          <figcaption>Model and cross-section of Sakae, Yokohama. <a href="asset-credits.html#geomodel3d">Image credits</a></figcaption>
+          <fieldset class="sakae-plate">
+            <legend class="sr-only">View of the Sakae geological model</legend>
+            <div class="sakae-layout">
+              <span class="sakae-location">Sakae, Yokohama</span>
+              <input class="sr-only sakae-choice" type="radio" name="sakae-view" id="sakae-model" checked>
+              <label for="sakae-model">3D cutaway</label>
+              <input class="sr-only sakae-choice" type="radio" name="sakae-view" id="sakae-section">
+              <label for="sakae-section">Section A–A′</label>
+              <div class="sakae-stage">
+                <a class="sakae-model-view" href="assets/research/sakae-model.webp" aria-label="Open the full-size Sakae terrain cutaway">
+                  <img src="assets/research/sakae-model.webp" width="761" height="384" loading="lazy" alt="Oblique view of Sakae terrain. The cut face exposes five coloured geological units beneath the street map.">
+                </a>
+                <div class="sakae-section-view">
+                  <p>Cross-section A–A′ <span>Vertical exaggeration 4.5×</span></p>
+                  <a href="assets/research/sakae-section.webp" aria-label="Open the full-size geological cross-section A–A prime">
+                    <img src="assets/research/sakae-section.webp" width="1298" height="296" loading="lazy" alt="Section through Sakae with borehole logs over the interpreted units. The ground surface descends from left to right across roughly 2.2 kilometres.">
+                  </a>
+                </div>
+              </div>
+              <ul class="sakae-key" aria-label="Geological units">
+                <li style="--unit: #ab9f92">Fill</li>
+                <li style="--unit: #c7b17a">Alluvium</li>
+                <li style="--unit: #b7683e">Kanto Loam</li>
+                <li style="--unit: #dfc36b">Pleistocene sediments</li>
+                <li style="--unit: #607285">Kazusa Group</li>
+              </ul>
+            </div>
+          </fieldset>
+          <figcaption>
+            KuniJiban boreholes · GSI terrain · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>.
+            <a href="assets/research/geomodel3d-sakae.jpg">Full screenshot</a> · <a href="asset-credits.html#geomodel3d">Image credits</a>
+          </figcaption>
         </figure>
         <div class="feature-copy">
           <p class="overline category">Geological modelling</p>
