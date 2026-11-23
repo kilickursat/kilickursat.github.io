@@ -1,229 +1,238 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kursat Kilic | AI for Smarter Tunnel Boring Machines</title>
-  <meta name="description" content="Premium research portfolio for Kursat Kilic: artificial intelligence, data-driven geomechanics, tunnel boring machines, lithology classification, cutter wear prediction, and autonomous tunnelling research." />
-  <meta name="theme-color" content="#05070d" />
-  <meta property="og:title" content="Kursat Kilic | AI for Smarter Tunnel Boring Machines" />
-  <meta property="og:description" content="Data-driven geomechanics, lithology classification, and cutter wear prediction for safer underground excavation." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://kilickursat.github.io/assets/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kursat Kilic | Geotechnical Research Engineer</title>
+  <meta name="description" content="Kursat Kilic’s research on soft-ground tunnelling, cutter wear and 3D geological modelling. Read the studies, explore the software and download the CV.">
+  <meta name="theme-color" content="#191c1a">
+  <link rel="canonical" href="https://kilickursat.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kursat Kilic | Geotechnical Research Engineer">
+  <meta property="og:description" content="Soft-ground tunnelling, cutter wear and geological modelling.">
+  <meta property="og:image" content="https://kilickursat.github.io/assets/og-image.png">
+  <meta property="og:image:alt" content="AI-generated illustration of a segmentally lined tunnel.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kursat Kilic",
-    "jobTitle": "PhD Student, AI Researcher",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Akita University"
-    },
-    "knowsAbout": [
-      "Tunnel boring machines",
-      "Artificial intelligence",
-      "Data science",
-      "Geotechnical engineering",
-      "Lithology classification",
-      "Cutter wear prediction"
-    ],
+    "jobTitle": "Research Engineer",
     "url": "https://kilickursat.github.io/",
-    "sameAs": [
-      "https://github.com/kilickursat",
-      "https://orcid.org/0000-0003-4362-0704",
-      "https://scholar.google.com/citations?user=sNB5IQsAAAAJ&hl=en",
-      "https://kursat-kilic.owlstown.net/publications"
-    ]
+    "knowsAbout": ["Geotechnical engineering", "Tunnel boring machines", "Lithology classification", "Cutter wear"],
+    "sameAs": ["https://orcid.org/0000-0003-4362-0704", "https://github.com/kilickursat"]
   }
   </script>
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-
-  <header class="site-header" data-header>
-    <nav class="nav-shell" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Kursat Kilic home">
-        <span class="brand-mark" aria-hidden="true">KK</span>
-        <span>
-          <strong>Kursat Kilic</strong>
-          <small>AI + TBM Research</small>
-        </span>
+  <header class="masthead" id="top">
+    <div class="wrap mast-inner">
+      <a class="wordmark" href="#top" aria-label="Kursat Kilic, home">
+        <img src="assets/favicon.svg" width="32" height="32" alt="">
+        <span>Kilic</span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links" data-nav-links>
+      <span class="mast-title">Research portfolio</span>
+      <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Software</a>
+          <a href="#timeline">Background</a>
+          <a href="#contact">Contact</a>
+      </nav>
+      <details class="mobile-nav">
+        <summary><span>Menu</span><i aria-hidden="true"></i></summary>
+        <nav aria-label="Main navigation"><a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Software</a>
+          <a href="#timeline">Background</a>
+          <a href="#contact">Contact</a></nav>
+      </details>
+    </div>
   </header>
-
-  <main id="main">
-    <section class="hero section" id="top" aria-labelledby="hero-title">
-      <div class="hero-grid container">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="pulse-dot"></span> AI-driven geomechanics and TBM intelligence</p>
-          <h1 id="hero-title">AI for Smarter Tunnel Boring Machines</h1>
-          <p class="hero-lead">Data-driven lithology classification, cutter wear prediction, and autonomous tunnelling workflows for safer and faster underground excavation.</p>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-art" id="tbm-canvas">
+        <source media="(max-width: 600px)" srcset="assets/tunnel-mobile.webp">
+        <img src="assets/tunnel-1200.webp" srcset="assets/tunnel-1200.webp 1200w, assets/tunnel-1920.webp 1920w" sizes="100vw" width="1920" height="800" alt="" fetchpriority="high">
+      </picture>
+      <div class="hero-shade"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="overline role"><span></span>Geotechnical research engineer</p>
+          <h1 id="hero-title">Kursat <i>Kilic</i></h1>
+          <p class="hero-lead" id="snapshot-title">I use tunnel boring machine data to identify changes in the ground and predict cutter wear during excavation.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#publications">Explore publications</a>
-            <a class="button button-ghost" href="https://github.com/kilickursat" target="_blank" rel="noreferrer">View GitHub</a>
-          </div>
-          <div class="metric-strip" data-stat-strip aria-label="Research metrics"></div>
-        </div>
-
-        <div class="hero-visual reveal" aria-label="Animated tunnel boring machine visualization">
-          <div class="visual-frame">
-            <canvas id="tbm-canvas" width="900" height="900" aria-hidden="true"></canvas>
-            <div class="canvas-fallback" aria-hidden="true">
-              <div class="fallback-tunnel"></div>
-              <div class="fallback-cutter"></div>
-            </div>
-            <div class="telemetry-card telemetry-card-a">
-              <span>Operational stream</span>
-              <strong>Torque / Thrust / PR</strong>
-              <small>Sensor fusion</small>
-            </div>
-            <div class="telemetry-card telemetry-card-b">
-              <span>Model layer</span>
-              <strong>LightGBM + CNN</strong>
-              <small>Inference ready</small>
+            <a class="button primary" href="#research">Selected research</a>
+            <div class="cv-action">
+              <a class="button secondary" href="https://raw.githubusercontent.com/kilickursat/Resume/c1cb76d56c60e4f632538235040e9bed9ff3cad7/KURSAT_KILIC_Resume_.pdf" download aria-describedby="cv-edition">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
+                Download CV
+              </a>
+              <span class="edition" id="cv-edition">PDF · Oct 2023</span>
             </div>
           </div>
         </div>
+        <div class="hero-foot">
+          <span class="location"><svg width="15" height="17" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 9c0 5-7 12-7 12S3 14 3 9a7 7 0 0 1 14 0Z"/><circle cx="10" cy="9" r="2.3"/></svg>Tokyo, Japan</span>
+          <span class="image-note">AI-generated illustration <b aria-hidden="true">/</b> Segmentally lined tunnel</span>
+        </div>
       </div>
     </section>
-
-    <section class="section compact" aria-labelledby="snapshot-title">
-      <div class="container snapshot-grid">
-        <article class="glass-card reveal">
-          <span class="card-kicker">Positioning</span>
-          <h2 id="snapshot-title">Research portfolio built around TBM intelligence</h2>
-          <p>This site is designed as a premium publication portfolio with a cinematic tunnel control-room aesthetic. It keeps the academic content readable while giving the first impression of advanced engineering and applied AI.</p>
+    <section class="wrap section research" id="research" aria-labelledby="research-title">
+      <div class="section-head">
+        <h2 id="research-title">Selected <i>research</i></h2>
+        <a class="underlink" href="#publications">View publications</a>
+      </div>
+      <article class="feature">
+        <figure class="model-figure">
+          <a href="assets/research/geomodel3d-sakae.jpg" aria-label="View the full-size GeoModel3D screenshot">
+            <img src="assets/research/geomodel3d-sakae.jpg" alt="The Sakae terrain cutaway above a cross-section of five coloured geological units, shown in GeoModel3D." width="1600" height="900" loading="lazy">
+          </a>
+          <figcaption>Model and cross-section of Sakae, Yokohama. <a href="asset-credits.html#geomodel3d">Image credits</a></figcaption>
+        </figure>
+        <div class="feature-copy">
+          <p class="overline category">Geological modelling</p>
+          <h3>Mapping the ground<br class="wide-break"> beneath Yokohama</h3>
+          <p>GeoModel3D turns borehole logs into a geological model you can explore in a browser. The Sakae example uses 75 boreholes to trace five subsurface units across the site.</p>
+          <div class="text-actions"><a class="underlink" href="https://kilickursat.github.io/GeoModel3D/">Explore GeoModel3D</a><a class="underlink quiet" href="https://github.com/kilickursat/GeoModel3D">Source code</a></div>
+        </div>
+      </article>
+      <div class="study-pair">
+        <article class="study">
+          <p class="overline category">Ground classification <span>/</span> 2023</p>
+          <h3>Reading lithology from machine logs</h3>
+          <p>One ground class accounted for three quarters of the observations. We grouped similar machine records before training LightGBM to recognise the less common ground types.</p>
+          <figure class="chart-figure">
+            <figcaption>Share of observations by ground class</figcaption>
+            <dl class="bars">
+              <div><dt>VSG</dt><dd><span class="bar-track"><i style="width:76.26%"></i></span><span>76.26%</span></dd></div>
+              <div><dt>VG</dt><dd><span class="bar-track"><i style="width:17.76%"></i></span><span>17.76%</span></dd></div>
+              <div><dt>VCS</dt><dd><span class="bar-track"><i style="width:5.97%"></i></span><span>5.97%</span></dd></div>
+            </dl>
+          </figure>
+          <a class="underlink" href="https://doi.org/10.1016/j.jrmge.2023.02.013">Read the lithology study</a>
         </article>
-        <article class="glass-card reveal">
-          <span class="card-kicker">Core theme</span>
-          <h3>From machine logs to ground insight</h3>
-          <p>The narrative connects TBM operational data, geotechnical interpretation, machine learning, and field-ready decision support.</p>
+        <article class="study">
+          <p class="overline category">Tool wear <span>/</span> 2022</p>
+          <h3>Estimating disc-cutter life</h3>
+          <p>Machine records from 723 tunnel rings and wear measurements from four inspections let us estimate how much ground a disc cutter can excavate per millimetre of wear.</p>
+          <figure class="wear-figure">
+            <a href="assets/research/disc-cutter-life.png" aria-label="View the full-size disc-cutter life plot"><img src="assets/research/disc-cutter-life.png" width="630" height="670" loading="lazy" alt="Scatter plot comparing measured and predicted excavated volume per millimetre of disc-cutter wear."></a>
+            <figcaption>Measured and predicted disc-cutter life. Kilic et al., Fig. 15(a). <a href="asset-credits.html#cutter-wear">CC BY 4.0</a></figcaption>
+          </figure>
+          <a class="underlink" href="https://doi.org/10.3390/app12052410">Read the cutter wear study</a>
         </article>
-        <article class="glass-card reveal">
-          <span class="card-kicker">Built for GitHub Pages</span>
-          <h3>No terminal, no build step</h3>
-          <p>All files are static. Upload them to the repository root and enable GitHub Pages from the main branch.</p>
-        </article>
       </div>
     </section>
-
-    <section class="section" id="research" aria-labelledby="research-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Research system</p>
-          <h2 id="research-title">A connected pipeline for autonomous tunnelling research</h2>
-          <p>Each block below can become a publication cluster, thesis chapter, or industry collaboration pitch.</p>
+    <section class="archive" id="publications" aria-labelledby="pubs-title">
+      <div class="wrap section">
+        <div class="section-head"><h2 id="pubs-title">Publications</h2></div>
+        <div class="pub-toolbar" hidden>
+          <label>Search publications<input type="search" id="pub-search" placeholder="Title, author or keyword"></label>
+          <label>Filter by topic<select id="topic"><option>All topics</option></select></label>
         </div>
-        <div class="research-grid" data-research-grid></div>
+        <p id="result-count" role="status" class="count" hidden></p>
+        <div class="pub-list">
+          <article class="publication" data-topics="LightGBM|Lithology|Soft ground|Clustering">
+            <div class="pub-aside"><span class="pub-year">2023</span><span>Journal article</span></div>
+            <div class="pub-body">
+              <h3><a href="https://doi.org/10.1016/j.jrmge.2023.02.013">Soft ground tunnel lithology classification using clustering-guided light gradient boosting machine</a></h3>
+              <p class="byline">Kursat Kilic, Hajime Ikeda, Tsuyoshi Adachi and Youhei Kawamura</p>
+              <p class="venue"><i>Journal of Rock Mechanics and Geotechnical Engineering</i> · 15(11), 2857–2867</p>
+              <p class="pub-description">A clustering-guided LightGBM model identifies soft-ground lithology from tunnel boring machine operating data.</p>
+              <div class="pub-actions">
+                <details class="citation"><summary>View citation</summary>
+                  <p>Kilic, K., Ikeda, H., Adachi, T., &amp; Kawamura, Y. (2023). Soft ground tunnel lithology classification using clustering-guided light gradient boosting machine. Journal of Rock Mechanics and Geotechnical Engineering, 15(11), 2857–2867. https://doi.org/10.1016/j.jrmge.2023.02.013</p>
+                </details>
+                <button class="copy-citation" type="button" hidden>Copy citation</button>
+              </div>
+            </div>
+          </article>
+          <article class="publication" data-topics="1D CNN|Cutter wear|EPB TBM|Deep learning">
+            <div class="pub-aside"><span class="pub-year">2022</span><span>Journal article</span></div>
+            <div class="pub-body">
+              <h3><a href="https://doi.org/10.3390/app12052410">One-Dimensional Convolutional Neural Network for Pipe Jacking EPB TBM Cutter Wear Prediction</a></h3>
+              <p class="byline">Kursat Kilic, Hisatoshi Toriya, Yoshino Kosugi, Tsuyoshi Adachi and Youhei Kawamura</p>
+              <p class="venue"><i>Applied Sciences</i> · 12(5), 2410</p>
+              <p class="pub-description">A 1D CNN estimates disc-cutter life from synchronized machine parameters and wear inspections in soft ground.</p>
+              <div class="pub-actions">
+                <details class="citation"><summary>View citation</summary>
+                  <p>Kilic, K., Toriya, H., Kosugi, Y., Adachi, T., &amp; Kawamura, Y. (2022). One-Dimensional Convolutional Neural Network for Pipe Jacking EPB TBM Cutter Wear Prediction. Applied Sciences, 12(5), 2410. https://doi.org/10.3390/app12052410</p>
+                </details>
+                <button class="copy-citation" type="button" hidden>Copy citation</button>
+              </div>
+            </div>
+          </article>
+          <article class="publication" data-topics="Cutting tools|ILCM|Mining engineering|Modeling">
+            <div class="pub-aside"><span class="pub-year">2020</span><span>Master’s thesis</span></div>
+            <div class="pub-body">
+              <h3><a href="https://webthesis.biblio.polito.it/15699/">Performance analysis of cutting tools from ILCM tests through computer-aided modelling methods</a></h3>
+              <p class="byline">Kursat Kilic</p>
+              <p class="venue"><i>Politecnico di Torino</i> · Master’s thesis, Petroleum and Mining Engineering</p>
+              <p class="pub-description">Cutting tests on diorite, Luserna stone and marble relate disc forces to specific energy. Supervised by Marilena Cardu. <a href="https://kursat-kilic.owlstown.net/publications/20655-master-degree-of-mining-engineering-master-degree-thesis-performance-analysis-of-cutting-tools-from-ilcm-tests-through-computer-aided-modeling-methods">Author’s thesis record</a></p>
+              <div class="pub-actions">
+                <details class="citation"><summary>View citation</summary>
+                  <p>Kilic, K. (2020). Performance analysis of cutting tools from ILCM tests through computer-aided modelling methods. Politecnico di Torino, Master’s thesis, Petroleum and Mining Engineering. https://webthesis.biblio.polito.it/15699/</p>
+                </details>
+                <button class="copy-citation" type="button" hidden>Copy citation</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="reset" id="reset-filters" type="button" hidden>Clear filters</button>
+        <span class="sr-only" id="copy-status" role="status"></span>
       </div>
     </section>
-
-    <section class="section dark-band" id="publications" aria-labelledby="pubs-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Selected publications</p>
-          <h2 id="pubs-title">Publication portfolio</h2>
-          <p>Searchable cards with DOI links, research tags, and quick citation copying.</p>
-        </div>
-
-        <div class="pub-toolbar reveal" aria-label="Publication filters">
-          <label class="search-box">
-            <span class="sr-only">Search publications</span>
-            <input type="search" placeholder="Search topic, author, venue, tag..." data-publication-search />
-          </label>
-          <div class="filter-pills" data-filter-pills></div>
-        </div>
-
-        <div class="publication-grid" data-publication-grid></div>
-      </div>
+    <section class="wrap section" id="projects" aria-labelledby="projects-title">
+      <div class="section-head"><h2 id="projects-title">Research <i>software</i></h2><a class="underlink" href="https://github.com/kilickursat">GitHub profile</a></div>
+      <ul class="repo-list">
+        <li><a href="https://github.com/kilickursat/GeoModel3D">GeoModel3D</a><span>Build and inspect 3D geological models from borehole logs.</span></li>
+        <li><a href="https://github.com/kilickursat/Clustering-guided-LightGBM">Clustering-guided-LightGBM</a><span>Code for the soft-ground lithology study.</span></li>
+        <li><a href="https://github.com/kilickursat/lithology-classifier">lithology-classifier</a><span>Lithology classification.</span></li>
+        <li><a href="https://github.com/kilickursat/TBM-EDA">TBM-EDA</a><span>Explore tunnel boring machine records in Streamlit.</span></li>
+        <li><a href="https://github.com/kilickursat/TBM-LLM">TBM-LLM</a><span>A language model for tunnelling questions.</span></li>
+        <li><a href="https://github.com/kilickursat/tbm-advance-rate-calculator">tbm-advance-rate-calculator</a><span>Calculate advance rates from engineering parameters.</span></li>
+        <li><a href="https://github.com/kilickursat/specificenergy">specificenergy</a><span>Predict excavation energy from EPB operating parameters.</span></li>
+      </ul>
     </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Code and prototypes</p>
-          <h2 id="projects-title">Research software and experiments</h2>
-          <p>A curated GitHub-facing layer for TBM analytics, tunnelling AI, and engineering calculators.</p>
-        </div>
-        <div class="project-grid" data-project-grid></div>
+    <div class="background">
+      <div class="wrap section background-grid">
+        <section id="system" aria-labelledby="system-title">
+          <h2 id="system-title">Research <i>method</i></h2>
+          <p class="method-lead">Connect what the machine records to what engineers find underground.</p>
+          <p>My studies pair thrust, torque and pressure readings with geological logs or cutter inspections. Those field observations give the models a physical reference for interpreting changes during excavation.</p>
+        </section>
+        <section id="timeline" aria-labelledby="timeline-title">
+          <h2 id="timeline-title">Background</h2>
+          <ol class="timeline">
+            <li><time datetime="2025">2025</time><div><strong>Research engineer</strong><span>Taisei Rotec Corporation, Tokyo</span></div></li>
+            <li><time datetime="2024">2024</time><div><strong>Doctoral research in mining informatics</strong><span>Akita University, Japan</span></div></li>
+            <li><time datetime="2020">2020</time><div><strong>Master’s thesis in mining engineering</strong><span>Politecnico di Torino, Italy</span></div></li>
+          </ol>
+        </section>
       </div>
-    </section>
-
-    <section class="section" id="system" aria-labelledby="system-title">
-      <div class="container system-panel reveal">
-        <div>
-          <p class="eyebrow">Visual method</p>
-          <h2 id="system-title">Ground + machine + intelligence</h2>
-          <p>The design uses an engineering dashboard metaphor: sensor traces feed models, models produce lithology and wear insight, and the output supports more reliable TBM operation.</p>
-        </div>
-        <div class="method-stack" aria-label="Research method flow">
-          <div class="method-node"><span>01</span><strong>TBM machine logs</strong><small>Torque, thrust, speed, advance, pressure</small></div>
-          <div class="method-node"><span>02</span><strong>Feature engineering</strong><small>Operational context and synchronized data</small></div>
-          <div class="method-node"><span>03</span><strong>ML inference</strong><small>LightGBM, CNN, clustering, deep learning</small></div>
-          <div class="method-node"><span>04</span><strong>Engineering action</strong><small>Lithology class, wear risk, performance support</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark-band" id="timeline" aria-labelledby="timeline-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Trajectory</p>
-          <h2 id="timeline-title">Research timeline</h2>
-          <p>A concise story for reviewers, collaborators, and research visitors.</p>
-        </div>
-        <div class="timeline" data-timeline></div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Collaboration</p>
-          <h2 id="contact-title">Build smarter tunnelling systems together</h2>
-          <p>Academic and industry collaborations on AI-enabled TBM performance, cutter wear, lithology identification, and autonomous underground construction.</p>
-        </div>
-        <div class="contact-card reveal">
-          <h3>Connect</h3>
-          <p>Use these links to keep the portfolio aligned with the public research footprint.</p>
-          <div class="contact-links" data-contact-links></div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p><strong>Kursat Kilic</strong> - AI Researcher | TBM Enthusiast | Data-Driven Engineering</p>
-      <p class="footer-note">Static GitHub Pages portfolio. Edit content in <code>data.js</code>.</p>
+  <footer id="contact" aria-labelledby="contact-title">
+    <div class="wrap section">
+      <div class="contact-grid">
+        <div><h2 id="contact-title">Get in <i>touch</i></h2><a class="contact-email" href="mailto:kilic_kursat@hotmail.com">kilic_kursat@hotmail.com</a></div>
+        <nav aria-label="Research profiles">
+          <a href="https://orcid.org/0000-0003-4362-0704">ORCID</a>
+          <a href="https://scholar.google.com/citations?user=sNB5IQsAAAAJ&amp;hl=en">Google Scholar</a>
+          <a href="https://kursat-kilic.owlstown.net/publications">Owlstown</a>
+          <a href="https://www.linkedin.com/in/kursat-kilic-395b5855">LinkedIn</a>
+        </nav>
+      </div>
+      <div class="colophon"><span>Kursat Kilic · Tokyo, Japan</span><a href="asset-credits.html">Asset credits</a><a href="#top">Back to top</a></div>
     </div>
   </footer>
-
-  <noscript>
-    <div class="noscript-message">This site works best with JavaScript enabled. Publications and links are also present in data.js for easy editing.</div>
-  </noscript>
-
-  <script defer src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
-  <script defer src="data.js"></script>
-  <script defer src="script.js"></script>
 </body>
 </html>

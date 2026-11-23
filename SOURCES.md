@@ -1,19 +1,10 @@
-# Public sources used while preparing this package
+# Portfolio sources
 
-This website package was prepared from public profile information and official platform documentation.
+Links and records checked on 23 November 2026.
 
-## Profile and publication sources
-
-- Google Scholar public profile for Kursat Kilic
-- Kursat Kilic Owlstown publication profile
-- Kursat Kilic GitHub profile
-- ORCID public profile 0000-0003-4362-0704
-
-## Deployment and technical references
-
-- GitHub Pages documentation for publishing from a branch
-- Three.js documentation recommending glTF/GLB for web 3D asset delivery
-
-## Data policy
-
-The site does not scrape Google Scholar at runtime. All publication and project content is manually curated inside `data.js` so it can be edited safely in the GitHub web interface.
+- The public October 2023 résumé identifies Kursat Kilic and lists his Akita and Politecnico research. The homepage download uses the PDF in the author's repository, pinned to the verified version. [Public CV](https://github.com/kilickursat/Resume/blob/c1cb76d56c60e4f632538235040e9bed9ff3cad7/KURSAT_KILIC_Resume_.pdf)
+- Current role, location and doctoral research dates were checked against the author's dated ORCID entries. The public academic profile provides the contact email. [ORCID](https://orcid.org/0000-0003-4362-0704) · [Owlstown](https://kursat-kilic.owlstown.net/)
+- Author lists, years, journal details and research descriptions follow the publisher records. [Lithology study](https://doi.org/10.1016/j.jrmge.2023.02.013) · [Cutter wear study](https://doi.org/10.3390/app12052410)
+- The institutional thesis record identifies Kursat Kilic as author and Marilena Cardu as supervisor. [Politecnico di Torino](https://webthesis.biblio.polito.it/15699/)
+- Research software links point to public repositories in the author's GitHub account. The Sakae example and the AR viewer are documented in GeoModel3D. [GitHub](https://github.com/kilickursat) · [GeoModel3D](https://github.com/kilickursat/GeoModel3D) · [Model viewer](https://kilickursat.github.io/GeoModel3D/) · [AR viewer](https://kilickursat.github.io/GeoModel3D/ar/)
+- Image sources, reuse terms, modifications and font licenses are listed in the [asset credits](asset-credits.html).

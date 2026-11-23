@@ -1,194 +1,46 @@
-window.PORTFOLIO_DATA = {
-  profile: {
-    name: "Kursat Kilic",
-    role: "PhD Student | AI Researcher | TBM Enthusiast",
-    affiliation: "Akita University",
-    location: "Japan",
-    tagline: "Bridging geotechnical engineering and artificial intelligence for smarter, safer tunnelling.",
-    refreshed: "2026-11-06",
-    links: [
-      {
-        label: "Google Scholar",
-        detail: "Publications and citations",
-        url: "https://scholar.google.com/citations?user=sNB5IQsAAAAJ&hl=en"
-      },
-      {
-        label: "GitHub",
-        detail: "Research code and prototypes",
-        url: "https://github.com/kilickursat"
-      },
-      {
-        label: "ORCID",
-        detail: "0000-0003-4362-0704",
-        url: "https://orcid.org/0000-0003-4362-0704"
-      },
-      {
-        label: "Owlstown",
-        detail: "Academic profile",
-        url: "https://kursat-kilic.owlstown.net/publications"
-      },
-      {
-        label: "LinkedIn",
-        detail: "Professional network",
-        url: "https://www.linkedin.com/in/kursat-kilic-395b5855"
-      },
-      {
-        label: "Email",
-        detail: "Collaboration contact",
-        url: "mailto:kilic_kursat@hotmail.com"
-      }
-    ]
-  },
-  stats: [
-    {
-      value: "119+",
-      label: "Google Scholar citations indexed"
-    },
-    {
-      value: "91",
-      label: "public GitHub repositories"
-    },
-    {
-      value: "AI + TBM",
-      label: "research identity"
+// The HTML is the publication catalogue. Index its existing entries for search.
+(() => {
+  const toolbar = document.querySelector(".pub-toolbar");
+  if (!toolbar) return;
+
+  const search = toolbar.querySelector("input");
+  const topic = toolbar.querySelector("select");
+  const count = document.getElementById("result-count");
+  const reset = document.getElementById("reset-filters");
+  const entries = Array.from(document.querySelectorAll(".publication"), article => {
+    const topics = article.dataset.topics.split("|");
+    const text = [".pub-aside", "h3", ".byline", ".venue", ".pub-description"]
+      .map(selector => article.querySelector(selector).innerText)
+      .concat(topics).join(" ").toLowerCase().replace(/\s+/g, " ");
+    return { article, topics, text };
+  });
+
+  const topics = new Set(entries.flatMap(entry => entry.topics));
+  for (const name of [...topics].sort()) topic.add(new Option(name, name));
+
+  function filter() {
+    const query = search.value.trim().toLowerCase();
+    let matches = 0;
+    for (const entry of entries) {
+      const matchesTopic = topic.selectedIndex === 0 || entry.topics.includes(topic.value);
+      entry.article.hidden = !(matchesTopic && entry.text.includes(query));
+      if (!entry.article.hidden) matches++;
     }
-  ],
-  researchAreas: [
-    {
-      icon: "TBM",
-      title: "TBM operational intelligence",
-      text: "Turning machine logs into engineering insight for performance, stability, and risk control.",
-      tags: ["EPB TBM", "Machine logs", "Performance"]
-    },
-    {
-      icon: "GEO",
-      title: "Soft-ground lithology classification",
-      text: "Using data-driven models to infer geological classes from tunnel boring machine operation.",
-      tags: ["LightGBM", "Clustering", "Lithology"]
-    },
-    {
-      icon: "CNN",
-      title: "Cutter wear prediction",
-      text: "Predicting wear behavior with deep learning and synchronized machine-parameter datasets.",
-      tags: ["1D CNN", "Cutter wear", "Maintenance"]
-    },
-    {
-      icon: "LLM",
-      title: "Tunnel domain AI",
-      text: "Building domain-aware models and knowledge tools for tunnelling and underground construction.",
-      tags: ["LLM", "Knowledge systems", "Decision support"]
-    }
-  ],
-  publications: [
-    {
-      title: "Soft ground tunnel lithology classification using clustering-guided light gradient boosting machine",
-      type: "Journal article",
-      year: "2023",
-      venue: "Journal of Rock Mechanics and Geotechnical Engineering",
-      authors: "Kursat Kilic, H. Ikeda, Tsuyoshi Adachi, Y. Kawamura",
-      summary: "A clustering-guided LightGBM workflow for soft-ground tunnel lithology classification, positioned at the interface of TBM operational data and geotechnical interpretation.",
-      tags: ["LightGBM", "Lithology", "Soft ground", "Clustering"],
-      doi: "10.1016/j.jrmge.2023.02.013",
-      url: "https://doi.org/10.1016/j.jrmge.2023.02.013",
-      cite: "Kilic, K., Ikeda, H., Adachi, T., and Kawamura, Y. (2023). Soft ground tunnel lithology classification using clustering-guided light gradient boosting machine. Journal of Rock Mechanics and Geotechnical Engineering."
-    },
-    {
-      title: "One-Dimensional Convolutional Neural Network for Pipe Jacking EPB TBM Cutter Wear Prediction",
-      type: "Journal article",
-      year: "2022",
-      venue: "Applied Sciences",
-      authors: "Kursat Kilic, H. Toriya, Yoshino Kosugi, Tsuyoshi Adachi, Y. Kawamura",
-      summary: "A 1D CNN approach for machine-parameter-based cutter wear prediction using EPB TBM operational data from soft-ground tunnelling conditions.",
-      tags: ["1D CNN", "Cutter wear", "EPB TBM", "Deep learning"],
-      doi: "10.3390/app12052410",
-      url: "https://doi.org/10.3390/app12052410",
-      cite: "Kilic, K., Toriya, H., Kosugi, Y., Adachi, T., and Kawamura, Y. (2022). One-Dimensional Convolutional Neural Network for Pipe Jacking EPB TBM Cutter Wear Prediction. Applied Sciences."
-    },
-    {
-      title: "Performance analysis of cutting tools from ILCM tests through computer-aided modeling methods",
-      type: "Thesis",
-      year: "2020",
-      venue: "Master Degree Thesis, Mining Engineering",
-      authors: "M. Cardu, Kursat Kilic",
-      summary: "A mining engineering thesis focused on cutting tool performance analysis using ILCM tests and computer-aided modeling methods.",
-      tags: ["Cutting tools", "ILCM", "Mining engineering", "Modeling"],
-      doi: "",
-      url: "https://kursat-kilic.owlstown.net/publications/20655-master-degree-of-mining-engineering-master-degree-thesis-performance-analysis-of-cutting-tools-from-ilcm-tests-through-computer-aided-modeling-methods",
-      cite: "Cardu, M. and Kilic, K. (2020). Performance analysis of cutting tools from ILCM tests through computer-aided modeling methods. Master Degree Thesis."
-    }
-  ],
-  projects: [
-    {
-      name: "GeoModel3D",
-      category: "Engineering app",
-      description: "Browser app that builds 3-D geological models from borehole logs and CPTs, with sections, groundwater and stresses, and reads borehole logs from PDF reports on the user's device.",
-      url: "https://github.com/kilickursat/GeoModel3D",
-      site: "https://kilickursat.github.io/GeoModel3D/",
-      tags: ["three.js", "WebGPU", "Geotechnics"]
-    },
-    {
-      name: "Clustering-guided-LightGBM",
-      category: "Publication code",
-      description: "Repository aligned with soft-ground tunnel lithology classification using clustering-guided LightGBM.",
-      url: "https://github.com/kilickursat/Clustering-guided-LightGBM",
-      tags: ["LightGBM", "Lithology", "Notebook"]
-    },
-    {
-      name: "lithology-classifier",
-      category: "Geotechnical ML",
-      description: "A compact repository name for lithology classification workflows and future deployment-facing research demos.",
-      url: "https://github.com/kilickursat/lithology-classifier",
-      tags: ["Classifier", "Geology", "Python"]
-    },
-    {
-      name: "TBM-EDA",
-      category: "Exploratory analytics",
-      description: "Streamlit-based exploratory data analysis app for tunnel boring machine datasets.",
-      url: "https://github.com/kilickursat/TBM-EDA",
-      tags: ["Streamlit", "EDA", "TBM"]
-    },
-    {
-      name: "TBM-LLM",
-      category: "Domain AI",
-      description: "Tunnel boring machine knowledge generator concept using an LLM trained on tunnelling literature.",
-      url: "https://github.com/kilickursat/TBM-LLM",
-      tags: ["LLM", "TBM", "Research assistant"]
-    },
-    {
-      name: "tbm-advance-rate-calculator",
-      category: "Engineering app",
-      description: "Professional-grade web application for calculating tunnel boring machine advance rates across geotechnical and machine conditions.",
-      url: "https://github.com/kilickursat/tbm-advance-rate-calculator",
-      tags: ["FastAPI", "Prediction", "Engineering"]
-    },
-    {
-      name: "specificenergy",
-      category: "Performance modeling",
-      description: "EPB TBM specific energy prediction using operational parameters.",
-      url: "https://github.com/kilickursat/specificenergy",
-      tags: ["Specific energy", "EPB", "Prediction"]
-    }
-  ],
-  timeline: [
-    {
-      year: "2020",
-      title: "Mining engineering thesis foundation",
-      text: "Cutting tool performance analysis through ILCM tests and computer-aided modeling methods."
-    },
-    {
-      year: "2022",
-      title: "Deep learning for cutter wear",
-      text: "1D CNN publication on EPB TBM cutter wear prediction using machine parameters."
-    },
-    {
-      year: "2023",
-      title: "Lithology classification from TBM data",
-      text: "Clustering-guided LightGBM work for soft-ground tunnel lithology classification."
-    },
-    {
-      year: "Now",
-      title: "Autonomous TBM and tunnel-domain AI",
-      text: "Expanding toward data-driven geomechanics, LLM-enabled tunnelling knowledge, and engineering decision support."
-    }
-  ]
-};
+    count.textContent = matches
+      ? matches + (matches === 1 ? " publication" : " publications")
+      : "No publications match these filters.";
+    reset.hidden = !query && topic.selectedIndex === 0;
+  }
+
+  search.addEventListener("input", filter);
+  topic.addEventListener("change", filter);
+  reset.addEventListener("click", () => {
+    search.value = "";
+    topic.selectedIndex = 0;
+    filter();
+    search.focus();
+  });
+  toolbar.hidden = false;
+  count.hidden = false;
+  filter();
+})();
